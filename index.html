@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="s.css">
+	<title>College partner</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" initial-scale="1.0">
+</head>
+<body>
+
+
+<div class="header">
+  <div class="title">
+  <div class="logo">College Partner</div>
+  <div class="heading">
+      <a href="#">Events</a>
+    <a href="#">Training</a>
+    <a href="#">Internship</a>
+  </div>
+  <div class="login">
+    <button class="a" onclick="openform1()">Login</button>
+    <button class="a" onclick="openform2()">Register</button>
+  </div>
+   </div>
+</div>
+
+
+<div class="loginblock" id="myform">
+    <form>
+    <label>Username</label>
+    <br>
+    <input type="email" name="Username" id="rtext">
+    <br>
+    <label>Password</label><br>
+    <input type="Password" name="psw" id="rtext">
+    <br>
+    <button id="sb" onclick="" name="login">submit</button><br>
+    <button id="cls" onclick="closeform()"> close</button>
+    </form>
+</div>
+
+<div class="register" id="register">
+  <div class="register1">
+    <form>
+      <label style="margin-right:60px">First name</label>
+      <label>Last name</label><br>
+      <input type="text" name="fname" id="rntext" placeholder="Nikhil">
+      <input type="text" name="lname" id="rntext" placeholder="kumar"><br>
+      <label>Email</label><br>
+      <input type="email" name="email" id="rntext1" placeholder="niks@gmail.com"><br>
+      <label>Password</label><br>
+      <input type="Password" name="pwd" id="rntext1"><br>
+      <button class="signup">SIGN UP</button>
+    </form>
+    </div>  
+</div>
+
+
+<div class="slide">
+        <div class="ms">
+          <img src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+        <div class="ms">
+          <img src="https://images.pexels.com/photos/1389103/pexels-photo-1389103.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        
+        </div>     
+          <div class="ms">
+          <img src="https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+        
+        <button class="Prev" onclick="dec()"><</button>
+        <button class="next" onclick="inc()">></button> 
+    </div>
+    
+
+
+
+<div class="events">
+  <div class="event1">
+     Trending Events 
+  </div>
+  <div class="content1">
+    <div class="trend"><img src="iitk.png"></div>
+    <div class="trend"><img src="iitk.png"></div>
+    <div class="trend"><img src="iitk.png"></div>
+    <div class="trend"><img src="iitk.png"></div>
+    <div class="trend"><img src="iitk.png"></div>
+  </div>
+</div>
+
+
+
+<div class="Training">
+  <div class="event2">
+     Popular Trainings
+  </div>
+    <div class="content2">
+    
+  </div>
+</div>
+<div class="intern">
+  <div class="event3">
+     Internship For you
+  </div>
+    <div class="content3">
+    
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="c1">
+      <h3>Events</h3>
+      <ul>
+        <li>IIT Delhi</li>
+        <li>NIT BHOPAL</li>
+        <li>IIT Kanpur</li>
+        <li>ISRO</li>
+        <li>IIT Mumbai</li>
+      </ul>
+    </div>
+    <div class="c2">
+      <h3>training</h3>
+    </div>
+    <div class="c3">
+      <h3>Intern</h3>
+    </div>
+    <div class="c4">
+      <h3>About Us</h3>
+    </div>
+  </div>
+  <div class="cp">
+    copyright &copy college partner :Fullfilling the need of students
+  </div>
+</footer>
+
+    <script type="text/javascript">
+    	var x=1;
+    	showslide(x);
+      setInterval(inc,1500);
+    	function inc(){
+            if(x===3)
+    		{
+    			x=1;
+    		}
+    		else{
+    			x++;
+    		}
+    		showslide(x);
+    	}
+    	function dec(){
+            if(x===1)
+    		{
+    			x=3;
+    		}
+    		else{
+    			x--;
+    		}
+    		showslide(x);
+    	}
+    	function showslide(n){
+               var i;
+               var y=document.getElementsByClassName("ms");
+               for( i=0;i<y.length;i++){
+               	y[i].style.display="none";
+               }
+               y[n-1].style.display="block";
+    	}
+
+      function openform1(){
+        var q=document.getElementById("myform");
+        q.style.display="block";
+      }
+      function closeform(){
+        var q=document.getElementById("myform");
+          q.style.display="none";
+      }
+      function openform2(){
+        var q=document.getElementById("register");
+        q.style.display="block";
+      }
+     </script>
+
+</body>
+</html>
